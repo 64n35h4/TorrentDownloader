@@ -24,7 +24,6 @@ def getEpisodeNumberNSeason(filename):
             e = m[1:]
         if len(m) == 4:
             s = m[:2]
-            # if s.endswith('x'): s = "0" + s[:-1]
             e = m[2:]
         if m.startswith('s'):
             m = m[1:]
@@ -44,7 +43,6 @@ def slugifyFolders(BASE=None):
 def scanPresentFiles(BASE_URL=os.path.dirname(os.path.realpath(__file__)), dir=""):
     valid = ["mp4","avi","mkv"]
     dir_key = slugify(dir)
-    # print os.path.join(BASE_URL,dir)
     hasEpidsodes = OrderedDict()
     try:
         for f in os.listdir(os.path.join(BASE_URL,dir)):
@@ -55,8 +53,6 @@ def scanPresentFiles(BASE_URL=os.path.dirname(os.path.realpath(__file__)), dir="
                 else:
                     hasEpidsodes[int(s)] = mySeason(int(s))
                     hasEpidsodes[int(s)].addEpisode(int(e))
-                # print os.path.join(BASE_URL,dir,f),
-                # print [s,e]
     except WindowsError:
         pass
     return hasEpidsodes
