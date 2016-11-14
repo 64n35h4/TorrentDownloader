@@ -1,5 +1,5 @@
 # TorrentDownloader
-TorrentDownloader is a download tool for torrent files - __Version 1.0, STILL HAS BUGS!__
+TorrentDownloader is a download tool for torrent files - __Version 1.0, STILL HAS BUGS!__ - Work In Progress.
 
 This tool will scan your watched history from trakt website, compare it to the currently aired episodes of each show, and compare that to the files you already downloaded onto your computer - if there will be any episodes aired that you havn't seen and didn't download already - it will search them on ThePirateBay and download them for you.
 
